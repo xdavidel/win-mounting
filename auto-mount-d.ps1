@@ -1,0 +1,1 @@
+Get-Partition | Where-Object -FilterScript {($_.Size -Gt "21474836480") -and (-Not $_.DriveLetter) -and ($_.Type -notcontains "Unknown")} |  Set-Partition -NewDriveLetter D
